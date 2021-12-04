@@ -49,6 +49,11 @@ public class Vevo {
     public void setTelefonszam(String telefonszam) {
         this.telefonszam = telefonszam;
     }
+
+    @Override
+    public String toString() {
+        return "Vevo Neve: " + nev + "\nCíme: " + cim + "\nTávolság: " + tavolsag + " km\nTelefonszáma: " + telefonszam + "\n";
+    }
     
     
 }
