@@ -15,7 +15,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //----------------------Név, NettóÁr, ElkIdő percben---------------
+        Termek t1 = new Termek("Gordon Bleu", 1200, 5);
+        Termek t2 = new Termek("Nagy Fatálas", 2500, 7);
+
+        
+        System.out.println(t1);
+        System.out.println(t2);
     }
     
 }
