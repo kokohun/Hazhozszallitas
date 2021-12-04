@@ -5,6 +5,6 @@ package hazhozszallitas;
  * @author patrikgergye
  * @author kornelnatz
  */
-public class Savanyusag extends Termek{
+public class Savanyusag extends Termek {
     private boolean friss;
 }
