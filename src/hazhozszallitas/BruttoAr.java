@@ -10,5 +10,5 @@ package hazhozszallitas;
  * @author Natz Kornel
  */
 public interface BruttoAr {
-    public void setAr(int ar);
+    public int setAr(int ar);
 }

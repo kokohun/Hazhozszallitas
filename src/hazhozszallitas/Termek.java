@@ -13,7 +13,7 @@ public class Termek implements BruttoAr {
 
     public Termek(String nev, int ar, int elkeszitesiido) {
         this.nev = nev;
-        this.ar = ar;
+        this.ar = setAr(ar);
         this.elkeszitesiido = elkeszitesiido;
     }
 
@@ -37,13 +37,13 @@ public class Termek implements BruttoAr {
         return ar;
     }
     
-    public void setAr(int ar) {
-        this.ar = (int)(ar * 1.27);
+    public int setAr(int ar) {
+        return this.ar = (int) (ar * 1.27);
     }
 
     @Override
     public String toString() {
-        return "Termek Nev: " + nev + ", Ára: " + ar + ", az elkészítési ideje: " + elkeszitesiido;
+        return "Termék Neve: " + nev + ", Ára: " + ar + " HUF, az elkészítési ideje: " + elkeszitesiido + " perc";
     }
     
     
