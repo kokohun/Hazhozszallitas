@@ -1,5 +1,7 @@
 package hazhozszallitas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author patrikgergye

@@ -8,7 +8,7 @@ package hazhozszallitas;
 public class Savanyusag extends Termek {
     private boolean friss;
 
-    public Savanyusag(boolean friss, String nev, int ar, int elkeszitesiido) {
+    public Savanyusag(String nev, boolean friss, int ar, int elkeszitesiido) {
         super(nev, ar, elkeszitesiido);
         this.friss = friss;
     }

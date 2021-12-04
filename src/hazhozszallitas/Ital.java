@@ -8,7 +8,7 @@ package hazhozszallitas;
 public class Ital extends Termek{
     private boolean szensavas;
 
-    public Ital(boolean szensavas, String nev, int ar, int elkeszitesiido) {
+    public Ital(String nev, boolean szensavas, int ar, int elkeszitesiido) {
         super(nev, ar, elkeszitesiido);
         this.szensavas = szensavas;
     }

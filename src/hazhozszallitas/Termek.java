@@ -6,7 +6,7 @@ package hazhozszallitas;
  * @author patrikgergye
  * @author kornelnatz
  */
-public class Termek implements BruttoAr {
+public class Termek extends Etlap implements BruttoAr {
     private String nev;
     private int ar;
     private int elkeszitesiido;
@@ -43,7 +43,7 @@ public class Termek implements BruttoAr {
 
     @Override
     public String toString() {
-        return "Termék Neve: " + nev + ", Ára: " + ar + " HUF, az elkészítési ideje: " + elkeszitesiido + " perc";
+        return "Termék Neve: " + nev + ", Ára: Br. " + ar + " HUF, az elkészítési ideje: " + elkeszitesiido + " perc";
     }
     
     
