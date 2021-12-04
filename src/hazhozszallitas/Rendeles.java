@@ -27,6 +27,7 @@ public class Rendeles implements BruttoAr {
         this.vevo = vevo;
         this.rendelesiido = new SimpleDateFormat("yyyy.MM.dd. HH:mm:ss").format(Calendar.getInstance().getTime());
         this.fizetesimod = fizetesimod;
+        
 
     }
     
@@ -51,6 +52,7 @@ public class Rendeles implements BruttoAr {
         for (Map.Entry<Termek, Integer> termek : Termekek.entrySet()) {
             vegosszeg += termek.getKey().getAr()*(termek.getValue());
         }
+        this.setVegosszeg(vegosszeg);
     }
     
     public void kiszallitasiIdo() {
