@@ -5,7 +5,7 @@ package hazhozszallitas;
  * @author patrikgergye
  * @author kornelnatz
  */
-public class Foetel extends Termek{
-    //koret enumban
+public class Foetel extends Termek {
+    private Koret koret;
     
 }
