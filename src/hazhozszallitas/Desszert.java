@@ -7,4 +7,5 @@ package hazhozszallitas;
  */
 public class Desszert extends Termek{
     private boolean glmentes;
+    private boolean lkzmentes;
 }
