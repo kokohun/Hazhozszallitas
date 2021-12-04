@@ -22,6 +22,15 @@ public class Main {
         
         System.out.println(t1);
         System.out.println(t2);
+        
+        System.out.println("\n\n//-------------------------------//");
+    
+        Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
+        Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
+        
+        System.out.println(v1);
+        System.out.println(v2);
+        
     }
     
 }
