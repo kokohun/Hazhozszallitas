@@ -9,6 +9,8 @@ package hazhozszallitas;
  *
  * @author Natz Kornel
  */
-public interface BruttoAr {
-    public void setVegosszeg(int vegosszeg);
+public enum FizetesiMod {
+    BANKKARTYA,
+    KESZPENZ,
+    SZEPKARTYA
 }

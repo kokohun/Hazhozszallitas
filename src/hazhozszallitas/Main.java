@@ -6,7 +6,6 @@
 package hazhozszallitas;
 
 import java.util.ArrayList;
-import jdk.nashorn.internal.ir.TernaryNode;
 
 /**
  *
@@ -18,11 +17,39 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
+        Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
+        Vevo v3 = new Vevo("Kiss Zoltán", "Abda, Ifjúsá u. 11.", 16, "06205678252");
+         
+        Termek t1 = new Foetel("Gordon Bleu", Koret.KROKETT, 1200, 10);
+        Termek t2 = new Savanyusag("Vegyes", true, 500, 4);
+        Termek t3 = new Desszert("Somlói", true, true, 700, 6);
+        Termek t4 = new Ital("Kóla", true, 400, 2);
+        Termek t5 = new Desszert("Tiramisu", false, true, 750, 5);
+        Termek t6 = new Ital("Ásványvíz", true, 450, 1);
+        
+        Etlap e1 = new Etlap();
+        e1.TermekHozzad(t1);
+        e1.TermekHozzad(t2);
+        e1.TermekHozzad(t3);
+        e1.TermekHozzad(t4);
+        e1.TermekHozzad(t5);
+        e1.TermekHozzad(t6);
+        
+        Rendeles r1 = new Rendeles(v1, FizetesiMod.SZEPKARTYA);
+        r1.TermekHozzaad(t1, 1);
+        r1.TermekHozzaad(t4, 2);
+        r1.TermekHozzaad(t3, 3);
+        
+        r1.VegOsszeg();
+        r1.kiszallitasiIdo();
+        
+        System.out.println(r1);
+        
+        
+        
         //----------------------Név, NettóÁr, ElkIdő percben---------------
-        //Termek t1 = new Termek("Gordon Bleu", 1200, 5);
-        //Termek t2 = new Termek("Nagy Fatálas", 2500, 7);
-        //Termek t3 = new Foetel(Koret.KROKETT, "asd", 0, 0);
-        //Termek t4 = new Savanyusag(true, "asd", 0, 0);
+        
 
         
         //System.out.println(t1);
@@ -38,20 +65,20 @@ public class Main {
         
         
         
-        ArrayList<Etlap> Etlap = new ArrayList<Etlap>();
-        Etlap.add(new Ital("Kóla", true, 610, 2));
-        Etlap.add(new Foetel("Rántott hús", Koret.KROKETT, 1200, 10));
-        Etlap.add(new Desszert("Somlói", true, true, 600, 5));
-        Etlap.add(new Savanyusag("Vegyes", true, 300, 2));
-        Etlap.add(new Ital("Korsó sör", true, 500, 3));
-        Etlap.add(new Foetel("Rántott hús", Koret.RIZS, 1200, 11));
+        //ArrayList<Etlap> Etlap = new ArrayList<Etlap>();
+        //Etlap.add(new Ital("Kóla", true, 610, 2));
+        //Etlap.add(new Foetel("Rántott hús", Koret.KROKETT, 1200, 10));
+        //Etlap.add(new Desszert("Somlói", true, true, 600, 5));
+        //Etlap.add(new Savanyusag("Vegyes", true, 300, 2));
+        //Etlap.add(new Ital("Korsó sör", true, 500, 3));
+        //Etlap.add(new Foetel("Rántott hús", Koret.RIZS, 1200, 11));
         
-        for (int i = 0; i < Etlap.size(); i++) {
-            System.out.println(Etlap.get(i));
-        }
+        //for (int i = 0; i < Etlap.size(); i++) {
+        //    System.out.println(Etlap.get(i));
+        //}
         
-        Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
-        Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
+        //Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
+        //Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
         
         
         

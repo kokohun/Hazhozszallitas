@@ -12,5 +12,4 @@ public enum Koret {
     KROKETT,
     SULTKRUMPLI
     
-    
 }
