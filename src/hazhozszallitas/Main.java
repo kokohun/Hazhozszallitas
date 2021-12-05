@@ -68,6 +68,15 @@ public class Main {
         rendeleslista.add(r2);
         rendeleslista.add(r3);
         
+        for(Rendeles counter: rendeleslista){
+            System.out.println(counter);
+	}
+
+
+        
+        
+        
+        
         Rendeles r4= new Rendeles(v1, FizetesiMod.SZEPKARTYA);
         r4.TermekHozzaad(t1, 2);
         r4.VegOsszeg();

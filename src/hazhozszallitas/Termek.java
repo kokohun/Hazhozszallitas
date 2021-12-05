@@ -45,7 +45,7 @@ public class Termek {
 
     @Override
     public String toString() {
-        return "Termék Neve: " + nev + ", Ára: Br. " + ar + " HUF, az elkészítési ideje: " + elkeszitesiido + " perc";
+        return "Termék Neve: " + nev + ", Ára: Br. " + ar + " HUF, az elkészítési ideje: " + elkeszitesiido + " perc\n";
     }
     
     

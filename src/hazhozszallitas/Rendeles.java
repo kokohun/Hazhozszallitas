@@ -80,17 +80,17 @@ public class Rendeles implements BruttoAr {
     
     
     public void blokk(){
-        System.out.println("------Blokk------------");
+        System.out.println("-----------Blokk------------");
         System.out.println("Vevő neve: "+vevo.getNev());
         System.out.println("Dátum: "+rendelesiido);
-        System.out.println("Termékek:");
+        System.out.println("\nTermékek:");
          for (Map.Entry<Termek, Integer> termek : Termekek.entrySet()) {
             System.out.print(termek.getKey().getNev()+" ");
-            System.out.print(termek.getKey().getAr()+"ft "+termek.getValue()+"db \n");   
+            System.out.print(termek.getKey().getAr()+" HUF "+termek.getValue()+" db \n");   
         }
         System.out.println("Végösszeg áfával: "+vegosszeg);
         System.out.println("Fizetési mód: "+fizetesimod);
-        System.out.println("-----------------------");
+        System.out.println("----------------------------");
     }
     
     
@@ -100,7 +100,7 @@ public class Rendeles implements BruttoAr {
     public String toString() {
         return "Rendeles:\nTermekek: " + Termekek + "\nRendelési idő: "
                 + rendelesiido + "\nVégösszeg: " + vegosszeg + "\nKiszállítási idő: "
-                + kiszallitasiido + "\nFizetési mód: " + fizetesimod + "\nVevő: " +
+                + kiszallitasiido + "\nFizetési mód: " + fizetesimod + "\n" +
                 vevo;
     }
 
