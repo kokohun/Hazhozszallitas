@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -104,34 +106,6 @@ public class Rendeles implements BruttoAr {
         System.out.println("Fizetési mód: "+fizetesimod);
         System.out.println("----------------------------");
     }
-    
-    //public void fajlbaIr() {
-    //    FileWriter fajl = null;
-    //    try {
-    //        for (Map.Entry<Rendeles, Integer> rendeles : Rendelesek.entrySet()) {
-    //            fajl = new FileWriter("megrendelesek.txt");
-    //            fajl.write("Vevő neve: " + vevo.getNev());
-    //            fajl.write("\nCíme: " + vevo.getCim());
-    //            fajl.write("\nTelefonszám: " + vevo.getTelefonszam());
-    //            fajl.write("\nÖsszérték: " + vegosszeg + " HUF");
-    //            fajl.write("\nFizetés módja: " + fizetesimod + "\n\n"); 
-    //        }
-    //    } 
-    //    catch (Exception e) {
-    //        e.printStackTrace();
-    //    }   
-    //    finally {
-    //        try {
-    //            if (fajl != null) {
-    //                fajl.flush();
-    //               fajl.close();				
-    //            }
-    //        } catch (IOException e) {
-    //            e.printStackTrace();
-    //        }
-    //	}
-    //}
-    
     
     @Override
     public String toString() {

@@ -84,12 +84,8 @@ public class Main {
 
         //VÉGÖSSZEG SZERINT CSÖKKENŐ SORRENDES KIÍRATÁS
         
-        Collections.sort(rendeleslista, Comparator.comparingInt(Rendeles::getVegosszeg).reversed());
-        
-        for (int i = 0; i < rendeleslista.size(); i++) {
-            System.out.println(rendeleslista.get(i));   
-        }
-        
+        Rendezes rend1 = new Rendezes();
+        rend1.vegosszegCsokkenobe(rendeleslista);
         
         //BLOKKOK KIÍRATÁSA
         
