@@ -87,6 +87,9 @@ public class Main {
         rendeleslista.add(r1);
         rendeleslista.add(r2);
         rendeleslista.add(r3);
+        
+        Fajl f1 = new Fajl();
+        f1.fajlbaIr(rendeleslista);
 
         Collections.sort(rendeleslista, Comparator.comparingInt(Rendeles::getVegosszeg).reversed());
         

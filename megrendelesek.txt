@@ -1,6 +1,18 @@
+
+Vevő neve: Viz Elek
+Címe: Győr, Kiss körút 1.
+Telefonszám: 06205417614
+Összérték: 5207 HUF
+Fizetés módja: SZEPKARTYA
+
+Vevő neve: Gipsz Jakab
+Címe: Nagybácsa, Elek u. 4.
+Telefonszám: 06205673249
+Összérték: 6921 HUF
+Fizetés módja: BANKKARTYA
+
 Vevő neve: Kiss Zoltán
-Címe: Abda, Ifjúsá u. 11.
+Címe: Abda, Ifjúság u. 11.
 Telefonszám: 06205678252
 Összérték: 6540 HUF
 Fizetés módja: KESZPENZ
-

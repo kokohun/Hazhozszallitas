@@ -39,6 +39,14 @@ public class Rendeles implements BruttoAr {
         return vegosszeg;
     }
     
+    public Vevo getVevo() {
+        return vevo;
+    }
+    
+    public FizetesiMod getFizetesiMod() {
+        return fizetesimod;
+    }
+    
     public void TermekHozzaad(Termek t, int db) {
         Termekek.put(t, db);
     }
