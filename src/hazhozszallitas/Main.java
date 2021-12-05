@@ -6,6 +6,13 @@
 package hazhozszallitas;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 
 /**
@@ -18,9 +25,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception{
+        //INICIALIZÁLÁS
         Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
         Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
-        Vevo v3 = new Vevo("Kiss Zoltán", "Abda, Ifjúsá u. 11.", 16, "06205678252");
+        Vevo v3 = new Vevo("Kiss Zoltán", "Abda, Ifjúság u. 11.", 16, "06205678252");
          
         Termek t1 = new Foetel("Gordon Bleu", Koret.KROKETT, 1200, 10);
         Termek t2 = new Savanyusag("Vegyes", true, 500, 4);
@@ -37,11 +45,14 @@ public class Main {
         e1.TermekHozzad(t5);
         e1.TermekHozzad(t6);
         
+        
+        
+        //VEVŐ RENDELÉSEK
+        
         Rendeles r1 = new Rendeles(v1, FizetesiMod.SZEPKARTYA);
         r1.TermekHozzaad(t1, 1);
         r1.TermekHozzaad(t4, 2);
         r1.TermekHozzaad(t3, 3);
-        
         r1.VegOsszeg();
         r1.kiszallitasiIdo();
         
@@ -49,7 +60,6 @@ public class Main {
         r2.TermekHozzaad(t6, 1);
         r2.TermekHozzaad(t3, 2);
         r2.TermekHozzaad(t1, 3);
-        
         r2.VegOsszeg();
         r2.kiszallitasiIdo();
         
@@ -57,35 +67,51 @@ public class Main {
         r3.TermekHozzaad(t2, 5);
         r3.TermekHozzaad(t4, 1);
         r3.TermekHozzaad(t5, 3);
-        
         r3.VegOsszeg();
         r3.kiszallitasiIdo();
         
-        //System.out.println(r1);
+        
+        //ArrayList rendeleslista = new ArrayList<>();
+        //rendeleslista.add(r1.getVegosszeg());
+        //rendeleslista.add(r2.getVegosszeg());
+        //rendeleslista.add(r3.getVegosszeg());
+        
+        //Collections.sort(rendeleslista, Collections.reverseOrder());
+        
+        //for (int i = 0; i < rendeleslista.size(); i++) {
+          //  System.out.println(rendeleslista.get(i));
+           
+        //}
         
         ArrayList<Rendeles> rendeleslista = new ArrayList<Rendeles>();
         rendeleslista.add(r1);
         rendeleslista.add(r2);
         rendeleslista.add(r3);
+
+        Collections.sort(rendeleslista, Comparator.comparingInt(Rendeles::getVegosszeg).reversed());
         
-        for(Rendeles counter: rendeleslista){
-            System.out.println(counter);
-	}
+        for (int i = 0; i < rendeleslista.size(); i++) {
+            System.out.println(rendeleslista.get(i));   
+        }
+        
+        
+        
 
 
         
         
         
         
-        Rendeles r4= new Rendeles(v1, FizetesiMod.SZEPKARTYA);
-        r4.TermekHozzaad(t1, 2);
-        r4.VegOsszeg();
-        r4.kiszallitasiIdo();
+        //Rendeles r4= new Rendeles(v1, FizetesiMod.SZEPKARTYA);
+        //r4.TermekHozzaad(t1, 2);
+        //r4.VegOsszeg();
+        //r4.kiszallitasiIdo();
         
         
         //Végösszeg szerint csökkenő sorrendbe kéne rendezni és úgy kiíratni minden adatot
         
-        r4.blokk();
+        r3.blokk();
+        
         
           
         
