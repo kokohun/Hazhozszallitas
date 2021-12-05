@@ -70,27 +70,20 @@ public class Main {
         r3.VegOsszeg();
         r3.kiszallitasiIdo();
         
-        
-        //ArrayList rendeleslista = new ArrayList<>();
-        //rendeleslista.add(r1.getVegosszeg());
-        //rendeleslista.add(r2.getVegosszeg());
-        //rendeleslista.add(r3.getVegosszeg());
-        
-        //Collections.sort(rendeleslista, Collections.reverseOrder());
-        
-        //for (int i = 0; i < rendeleslista.size(); i++) {
-          //  System.out.println(rendeleslista.get(i));
-           
-        //}
+        //RENDELÉS LISTA
         
         ArrayList<Rendeles> rendeleslista = new ArrayList<Rendeles>();
         rendeleslista.add(r1);
         rendeleslista.add(r2);
         rendeleslista.add(r3);
         
+        //FÁJLBA ÍRÁS
+        
         Fajl f1 = new Fajl();
         f1.fajlbaIr(rendeleslista);
 
+        //VÉGÖSSZEG SZERINT CSÖKKENŐ SORRENDES KIÍRATÁS
+        
         Collections.sort(rendeleslista, Comparator.comparingInt(Rendeles::getVegosszeg).reversed());
         
         for (int i = 0; i < rendeleslista.size(); i++) {
@@ -98,63 +91,11 @@ public class Main {
         }
         
         
-        
-
-
-        
-        
-        
-        
-        //Rendeles r4= new Rendeles(v1, FizetesiMod.SZEPKARTYA);
-        //r4.TermekHozzaad(t1, 2);
-        //r4.VegOsszeg();
-        //r4.kiszallitasiIdo();
-        
-        
-        //Végösszeg szerint csökkenő sorrendbe kéne rendezni és úgy kiíratni minden adatot
+        //BLOKKOK KIÍRATÁSA
         
         r3.blokk();
-        
-        
-          
-        
-        
-        
-        //----------------------Név, NettóÁr, ElkIdő percben---------------
-        
+        r1.blokk();
 
-        
-        //System.out.println(t1);
-        //System.out.println(t2);
-        
-        //System.out.println("\n\n//-------------------------------//");
-    
-        //Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
-        //Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
-        
-        //System.out.println(v1);
-        //System.out.println(v2);
-        
-        
-        
-        //ArrayList<Etlap> Etlap = new ArrayList<Etlap>();
-        //Etlap.add(new Ital("Kóla", true, 610, 2));
-        //Etlap.add(new Foetel("Rántott hús", Koret.KROKETT, 1200, 10));
-        //Etlap.add(new Desszert("Somlói", true, true, 600, 5));
-        //Etlap.add(new Savanyusag("Vegyes", true, 300, 2));
-        //Etlap.add(new Ital("Korsó sör", true, 500, 3));
-        //Etlap.add(new Foetel("Rántott hús", Koret.RIZS, 1200, 11));
-        
-        //for (int i = 0; i < Etlap.size(); i++) {
-        //    System.out.println(Etlap.get(i));
-        //}
-        
-        //Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
-        //Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
-        
-        
-        
-        
     }
     
 }
