@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+
 /**
  *
  * @author patrikgergye
@@ -23,10 +24,11 @@ public class Rendeles implements BruttoAr {
     private Vevo vevo;
     private int db;
 
-    public Rendeles(Vevo vevo, FizetesiMod fizetesimod) {
+    public Rendeles(Vevo vevo, FizetesiMod fizetesimod){
         this.vevo = vevo;
         this.rendelesiido = new SimpleDateFormat("yyyy.MM.dd. HH:mm:ss").format(Calendar.getInstance().getTime());
         this.fizetesimod = fizetesimod;
+        
         
 
     }
@@ -47,13 +49,21 @@ public class Rendeles implements BruttoAr {
         this.vegosszeg = (int) (vegosszeg * 1.27);
     }
     
-    public void VegOsszeg() {
+    //vegosszeghez merten SZEP-kartya elfogadas
+    public void VegOsszeg() throws Exception{
         vegosszeg = 0;
         for (Map.Entry<Termek, Integer> termek : Termekek.entrySet()) {
             vegosszeg += termek.getKey().getAr()*(termek.getValue());
         }
         this.setVegosszeg(vegosszeg);
+        
+        if(vegosszeg>10000 && fizetesimod==fizetesimod.SZEPKARTYA)
+        {
+            throw new Exception("SZÉP-kártyát csak 10000 forint alatt lehet használni!");
+        }
+        
     }
+    
     
     public void kiszallitasiIdo() {
         kiszallitasiido = 0;

@@ -7,6 +7,7 @@ package hazhozszallitas;
 
 import java.util.ArrayList;
 
+
 /**
  *
  * @author Natz Kornel
@@ -16,7 +17,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
         Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
         Vevo v3 = new Vevo("Kiss Zoltán", "Abda, Ifjúsá u. 11.", 16, "06205678252");
@@ -67,11 +68,15 @@ public class Main {
         rendeleslista.add(r2);
         rendeleslista.add(r3);
         
+        Rendeles r4= new Rendeles(v1, FizetesiMod.SZEPKARTYA);
+        r4.TermekHozzaad(t1, 2);
+        r4.VegOsszeg();
+        r4.kiszallitasiIdo();
         
         
         //Végösszeg szerint csökkenő sorrendbe kéne rendezni és úgy kiíratni minden adatot
         
-        r1.blokk();
+        r4.blokk();
         
           
         
