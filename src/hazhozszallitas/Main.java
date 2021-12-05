@@ -44,7 +44,36 @@ public class Main {
         r1.VegOsszeg();
         r1.kiszallitasiIdo();
         
-        System.out.println(r1);
+        Rendeles r2 = new Rendeles(v2, FizetesiMod.BANKKARTYA);
+        r2.TermekHozzaad(t6, 1);
+        r2.TermekHozzaad(t3, 2);
+        r2.TermekHozzaad(t1, 3);
+        
+        r2.VegOsszeg();
+        r2.kiszallitasiIdo();
+        
+        Rendeles r3 = new Rendeles(v3, FizetesiMod.KESZPENZ);
+        r3.TermekHozzaad(t2, 5);
+        r3.TermekHozzaad(t4, 1);
+        r3.TermekHozzaad(t5, 3);
+        
+        r3.VegOsszeg();
+        r3.kiszallitasiIdo();
+        
+        //System.out.println(r1);
+        
+        ArrayList<Rendeles> rendeleslista = new ArrayList<Rendeles>();
+        rendeleslista.add(r1);
+        rendeleslista.add(r2);
+        rendeleslista.add(r3);
+        
+        
+        
+        //Végösszeg szerint csökkenő sorrendbe kéne rendezni és úgy kiíratni minden adatot
+        
+        r1.blokk();
+        
+          
         
         
         

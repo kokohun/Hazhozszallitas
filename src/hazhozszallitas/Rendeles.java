@@ -66,7 +66,26 @@ public class Rendeles implements BruttoAr {
         }
         kiszallitasiido += maxido;
     }
-
+    
+    
+    
+    public void blokk(){
+        System.out.println("------Blokk------------");
+        System.out.println("Vevő neve: "+vevo.getNev());
+        System.out.println("Dátum: "+rendelesiido);
+        System.out.println("Termékek:");
+         for (Map.Entry<Termek, Integer> termek : Termekek.entrySet()) {
+            System.out.print(termek.getKey().getNev()+" ");
+            System.out.print(termek.getKey().getAr()+"ft "+termek.getValue()+"db \n");   
+        }
+        System.out.println("Végösszeg áfával: "+vegosszeg);
+        System.out.println("Fizetési mód: "+fizetesimod);
+        System.out.println("-----------------------");
+    }
+    
+    
+    
+    
     @Override
     public String toString() {
         return "Rendeles:\nTermekek: " + Termekek + "\nRendelési idő: "
