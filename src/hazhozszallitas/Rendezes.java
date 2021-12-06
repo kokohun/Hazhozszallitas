@@ -22,4 +22,6 @@ public class Rendezes {
             System.out.println(rendeleslista.get(i));   
         }
     }
+    
+    
 }

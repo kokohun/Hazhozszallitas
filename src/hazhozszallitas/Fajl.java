@@ -37,16 +37,17 @@ public class Fajl {
         this.rendeles = rendeles;
     }
     
-    public void fajlbaIr(ArrayList<Rendeles> rendeleslista) {
+    public void fajlbaIr(ArrayList<Vevo> vevolista, ArrayList<Rendeles> rendeleslista) {
         FileWriter fajl = null;
         try {
             fajl = new FileWriter("megrendelesek.txt");
-            for (int i = 0; i < rendeleslista.size(); i++) {
-                fajl.write("\nVevő neve: " + rendeleslista.get(i).getVevo().getNev());
-                fajl.write("\nCíme: " + rendeleslista.get(i).getVevo().getCim());
-                fajl.write("\nTelefonszám: " + rendeleslista.get(i).getVevo().getTelefonszam());
+            for (int i = 0; i < vevolista.size(); i++) {
+                fajl.write("\nVevő neve: " + vevolista.get(i).getNev());
+                fajl.write("\nCíme: " + vevolista.get(i).getCim());
+                fajl.write("\nTelefonszám: " + vevolista.get(i).getTelefonszam());
                 fajl.write("\nÖsszérték: " + rendeleslista.get(i).getVegosszeg() + " HUF");
-                fajl.write("\nFizetés módja: " + rendeleslista.get(i).getFizetesiMod() + "\n"); 
+                fajl.write("\nFizetés módja: " + rendeleslista.get(i).getFizetesiMod()); 
+                fajl.write("\nTávolság: " + vevolista.get(i).getTavolsag()+ "\n"); 
             
             }
         } 
@@ -63,5 +64,13 @@ public class Fajl {
                 e.printStackTrace();
             }
     	}
+    }
+    
+    public void tavolsagNovekvobe(ArrayList<Vevo> vevolista) {
+        Collections.sort(vevolista, Comparator.comparingInt(Vevo::getTavolsag));
+        
+        for (int i = 0; i < vevolista.size(); i++) {
+            System.out.println(vevolista.get(i));   
+        }
     }
 }

@@ -10,6 +10,7 @@ public class Vevo {
     private String cim;
     private int tavolsag;
     private String telefonszam;
+    private Rendeles rendeles;
 
     public Vevo(String nev, String cim, int tavolsag, String telefonszam) {
         this.nev = nev;
@@ -17,7 +18,7 @@ public class Vevo {
         this.tavolsag = tavolsag;
         this.telefonszam = telefonszam;
     }
-
+    
     public String getNev() {
         return nev;
     }
@@ -34,6 +35,10 @@ public class Vevo {
         return telefonszam;
     }
 
+    public Rendeles getRendeles() {
+        return rendeles;
+    }
+    
     public void setNev(String nev) {
         this.nev = nev;
     }

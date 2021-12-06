@@ -26,9 +26,13 @@ public class Main {
      */
     public static void main(String[] args) throws Exception{
         //INICIALIZÁLÁS
-        Vevo v1 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
-        Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 14, "06205673249");
-        Vevo v3 = new Vevo("Kiss Zoltán", "Abda, Ifjúság u. 11.", 16, "06205678252");
+        ArrayList<Vevo> vevolista = new ArrayList<Vevo>();
+        Vevo v1 = new Vevo("Kiss Zoltán", "Abda, Ifjúság u. 11.", 16, "06205678252");
+        Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 18, "06205673249");
+        Vevo v3 = new Vevo("Viz Elek", "Győr, Kiss körút 1.", 6, "06205417614");
+        vevolista.add(v1);
+        vevolista.add(v2);
+        vevolista.add(v3);
          
         Termek t1 = new Foetel("Gordon Bleu", Koret.KROKETT, 1200, 10);
         Termek t2 = new Savanyusag("Vegyes", true, 500, 4);
@@ -77,10 +81,11 @@ public class Main {
         rendeleslista.add(r2);
         rendeleslista.add(r3);
         
-        //FÁJLBA ÍRÁS
+        //FÁJLBA ÍRÁS TÁVOLSÁG SZERINT NÖVEKVŐBE
         
         Fajl f1 = new Fajl();
-        f1.fajlbaIr(rendeleslista);
+        f1.tavolsagNovekvobe(vevolista);
+        f1.fajlbaIr(vevolista, rendeleslista);
 
         //VÉGÖSSZEG SZERINT CSÖKKENŐ SORRENDES KIÍRATÁS
         
@@ -91,6 +96,7 @@ public class Main {
         
         r3.blokk();
         r1.blokk();
+        
 
     }
     
