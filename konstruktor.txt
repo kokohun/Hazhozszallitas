@@ -1,0 +1,3 @@
+A konstruktor egy olyan metódus az osztályon belül, ami objektum létrehozásakor hívódik meg(new kulcsszóval). Beállítja az objektum kezdeti értékeit, felépíti az objektumot.
+Felismerni onnan lehet, hogy neve megegyezik az osztály nevével. Több is lehet belőle, ha eltérő paraméterlistát adunk meg.
+
