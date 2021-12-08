@@ -1,11 +1,11 @@
-package hazhozszallitas;
-
-
 /**
  *
- * @author patrikgergye
- * @author kornelnatz
+ * @author Nátz Kornél JOO2S6
+ * @author Gergye Patrik RAF7BE
  */
+
+package hazhozszallitas;
+
 public class Termek {
     private String nev;
     private int ar;
@@ -14,7 +14,6 @@ public class Termek {
     public Termek(String nev, int ar, int elkeszitesiido) {
         this.nev = nev;
         this.ar = ar;
-    //this.ar = setAr(ar);
         this.elkeszitesiido = elkeszitesiido;
     }
 
@@ -40,7 +39,6 @@ public class Termek {
     
     public void setAr(int ar) {
         this.ar = ar;
-        //return this.ar = (int) (ar * 1.27);
     }
 
     @Override

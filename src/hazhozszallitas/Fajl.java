@@ -1,8 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Nátz Kornél JOO2S6
+ * @author Gergye Patrik RAF7BE
  */
+
 package hazhozszallitas;
 
 import java.io.FileWriter;
@@ -10,13 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
 
-/**
- *
- * @author Natz Kornel
- */
 public class Fajl {
     private Vevo vevo;
     private Rendeles rendeles;
@@ -69,8 +64,8 @@ public class Fajl {
     public void tavolsagNovekvobe(ArrayList<Vevo> vevolista) {
         Collections.sort(vevolista, Comparator.comparingInt(Vevo::getTavolsag));
         
-        for (int i = 0; i < vevolista.size(); i++) {
-            System.out.println(vevolista.get(i));   
-        }
+        //for (int i = 0; i < vevolista.size(); i++) {
+            //System.out.println(vevolista.get(i));   
+        //}
     }
 }

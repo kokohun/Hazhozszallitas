@@ -1,31 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Nátz Kornél JOO2S6
+ * @author Gergye Patrik RAF7BE
  */
+
 package hazhozszallitas;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
-
-/**
- *
- * @author Natz Kornel
- */
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws Exception{
+        
         //INICIALIZÁLÁS
+        
         ArrayList<Vevo> vevolista = new ArrayList<Vevo>();
         Vevo v1 = new Vevo("Kiss Zoltán", "Abda, Ifjúság u. 11.", 16, "06205678252");
         Vevo v2 = new Vevo("Gipsz Jakab", "Nagybácsa, Elek u. 4.", 18, "06205673249");
@@ -48,8 +35,6 @@ public class Main {
         e1.TermekHozzad(t4);
         e1.TermekHozzad(t5);
         e1.TermekHozzad(t6);
-        
-        
         
         //VEVŐ RENDELÉSEK
         
@@ -94,9 +79,30 @@ public class Main {
         
         //BLOKKOK KIÍRATÁSA
         
-        r3.blokk();
-        r1.blokk();
+        r3.blokkKiir();
+        r1.blokkKiir();
         
+        //PÉLDA TÖRLÉSRE
+        
+        r3.TermekTorol(t2);
+        r3.TermekTorol(t5);
+        r3.VegOsszeg();
+        r3.kiszallitasiIdo();
+        System.out.println(r3);
+        
+        //PÉLDA MÓDOSÍTÁSRA
+        
+        r1.TermekDbSzamMod(t1, 4);
+        r1.VegOsszeg();
+        r1.kiszallitasiIdo();
+        System.out.println(r1);
+        
+        //SZÉPKÁRTYÁS KIVÉTELRE PÉLDA
+        
+        //r1.TermekDbSzamMod(t1, 10);
+        //r1.VegOsszeg();
+        //r1.kiszallitasiIdo();
+        //System.out.println(r1);
 
     }
     

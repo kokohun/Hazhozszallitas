@@ -1,24 +1,16 @@
+/**
+ *
+ * @author Nátz Kornél JOO2S6
+ * @author Gergye Patrik RAF7BE
+ */
+
 package hazhozszallitas;
 
-
-import java.io.FileWriter;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
-/**
- *
- * @author patrikgergye
- * @author kornelnatz
- */
 public class Rendeles implements BruttoAr {
     //lista ami termékeket tárol
     
@@ -50,7 +42,7 @@ public class Rendeles implements BruttoAr {
     }
     
     public void TermekHozzaad(Termek t, int db) {
-        Termekek.put(t, db);
+        Termekek.put(t, db);  
     }
     
     public void TermekTorol(Termek t) {
@@ -73,13 +65,11 @@ public class Rendeles implements BruttoAr {
         }
         this.setVegosszeg(vegosszeg);
         
-        if(vegosszeg>10000 && fizetesimod==fizetesimod.SZEPKARTYA)
-        {
+        if (vegosszeg > 10000 && fizetesimod == fizetesimod.SZEPKARTYA) {
             throw new Exception("SZÉP-kártyát csak 10 000 HUF alatt lehet használni!");
         }
         
     }
-    
     
     public void kiszallitasiIdo() {
         kiszallitasiido = 0;
@@ -93,7 +83,7 @@ public class Rendeles implements BruttoAr {
         kiszallitasiido += maxido;
     }
     
-    public void blokk(){
+    public void blokkKiir(){
         System.out.println("-----------Blokk------------");
         System.out.println("Vevő neve: "+vevo.getNev());
         System.out.println("Dátum: "+rendelesiido);
@@ -102,14 +92,16 @@ public class Rendeles implements BruttoAr {
             System.out.print(termek.getKey().getNev()+" ");
             System.out.print(termek.getKey().getAr()+" HUF "+termek.getValue()+" db \n");   
         }
-        System.out.println("\nVégösszeg áfával: "+vegosszeg);
-        System.out.println("Fizetési mód: "+fizetesimod);
+        System.out.println("\nVégösszeg ÁFA-val: " + vegosszeg + " HUF");
+        System.out.println("Fizetési mód: " + fizetesimod);
         System.out.println("----------------------------");
     }
     
     @Override
     public String toString() {
-        return "----------RENDELÉS----------\n----------------------------\nTermekek: "
+        return "----------RENDELÉS----------\n"
+                + "----------------------------\n"
+                + "Termekek: "
                 + Termekek + "\n\nRendelési idő: "
                 + rendelesiido + "\nVégösszeg: Br. " 
                 + vegosszeg + " HUF\nKiszállítási idő: "

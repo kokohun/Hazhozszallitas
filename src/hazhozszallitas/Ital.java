@@ -1,10 +1,11 @@
-package hazhozszallitas;
-
 /**
  *
- * @author patrikgergye
- * @author kornelnatz
+ * @author Nátz Kornél JOO2S6
+ * @author Gergye Patrik RAF7BE
  */
+
+package hazhozszallitas;
+
 public class Ital extends Termek{
     private boolean szensavas;
 
@@ -12,6 +13,4 @@ public class Ital extends Termek{
         super(nev, ar, elkeszitesiido);
         this.szensavas = szensavas;
     }
-    
-    
 }

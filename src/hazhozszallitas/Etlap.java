@@ -1,12 +1,13 @@
+/**
+ *
+ * @author Nátz Kornél JOO2S6
+ * @author Gergye Patrik RAF7BE
+ */
+
 package hazhozszallitas;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author patrikgergye
- * @author kornelnatz
- */
 public class Etlap {
     public ArrayList<Termek> Termekek = new ArrayList<Termek>();
 
